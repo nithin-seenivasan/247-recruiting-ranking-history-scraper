@@ -6,7 +6,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 
 recruits_per_page = 50
-year_range = range(2020, 2021)
+year_range = range(2010, 2021)
 
 
 def http_get(url):
