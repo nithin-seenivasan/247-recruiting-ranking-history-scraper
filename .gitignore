@@ -132,4 +132,4 @@ dmypy.json
 .idea
 
 # Output
-players-and-links.json
+recruit-list-*.txt
