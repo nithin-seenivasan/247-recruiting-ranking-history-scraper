@@ -11,14 +11,6 @@ def get_ranking_history_url(player_profile_html, full_name):
         print(emoji.emojize(f':thumbsdown: Error parsing recruiting ranking history page for {full_name}', use_aliases=True))
 
 
-def get_recruiting_profile_url(player_profile_html, full_name):
-    base_page = BeautifulSoup(player_profile_html, 'html.parser')
-    try:
-        return base_page.find('a', class_='view-profile-link')['href']
-    except:
-        print(emoji.emojize(f':thumbsdown: Error parsing recruiting profile for {full_name}', use_aliases=True))
-
-
 def get_recruiting_ranking_history(player_id, recruiting_ranking_url):
     recruiting_ranking_html = http_get(recruiting_ranking_url)
     base_page = BeautifulSoup(recruiting_ranking_html, 'html.parser')
@@ -41,11 +33,28 @@ def get_recruiting_ranking_history(player_id, recruiting_ranking_url):
             'delta': delta_value,
             'delta_inception_value': delta_inception_value
         })
-    print(ranking_history_output)
+    return ranking_history_output
+
+
+def get_recruiting_timeline(player_id, player_profile_url):
+    event_output_list = []
+    recruiting_profile_html = http_get(f'{player_profile_url}TimelineEvents')
+    base_page = BeautifulSoup(recruiting_profile_html, 'html.parser')
+    timeline_ul = base_page.find('ul', class_='timeline-event-index_lst')
+    timeline_lis = timeline_ul.find_all('li')
+    for list_item in timeline_lis:
+        event_output = {
+            '247_id': player_id
+        }
+        date_and_event_split = list_item.find('b').text.split(': ')
+        event_output['event_date'] = date_and_event_split[0]
+        event_output['event_type'] = date_and_event_split[1]
+        paragraph_tags = list_item.find_all('p')
+        event_output['event_description'] = paragraph_tags[1].text
+        event_output_list.append(event_output)
+    return event_output_list
+
 
 player_profile_url = 'https://247sports.com/Player/Bryan-Bresee-46038819/'
 ranking_history_url = 'https://247sports.com/PlayerSport/Bryan-Bresee-at-Damascus-199727/RecruitRankHistory/'
-recruiting_profile_url = 'https://247sports.com/Player/Bryan-Bresee-46038819/high-school-189881'
-get_recruiting_ranking_history(46038819, ranking_history_url)
-
-
+print(get_recruiting_timeline(46038819, player_profile_url))
