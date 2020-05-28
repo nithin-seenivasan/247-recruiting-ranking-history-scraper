@@ -2,23 +2,17 @@ import math
 import json
 import emoji
 import re
-import urllib.request
+from http_utility import http_get
 from bs4 import BeautifulSoup
 
 recruits_per_page = 50
-year_range = range(2010, 2021)
-
-
-def http_get(url):
-    request = urllib.request.Request(
-        url, headers={'User-Agent': 'Mozilla/5.0'})
-    return urllib.request.urlopen(request)
+year_range = range(2020, 2021)
+recruit_list_path = './recruit-lists'
 
 
 def get_number_of_pages_for_year(year):
     url = f'https://247sports.com/Season/{year}-Football/CompositeRecruitRankings/'
-    response = http_get(url)
-    html = response.read()
+    html = http_get(url)
     base_page = BeautifulSoup(html, 'html.parser')
     count_span = base_page.find('span', class_='count')
     recruit_count = int(count_span.text.strip(' ()'))
@@ -26,8 +20,7 @@ def get_number_of_pages_for_year(year):
 
 
 def parse_page_of_recruits(url, recruit_list, year):
-    response = http_get(url)
-    html = response.read()
+    html = http_get(url)
     base_page = BeautifulSoup(html, 'html.parser')
     rankings_page_div = base_page.find('div', class_='rankings-page__main')
     list_items = rankings_page_div.find_all(
@@ -54,7 +47,9 @@ def parse_page_of_recruits(url, recruit_list, year):
                 recruit['high_school'] = ''
                 recruit['city'] = ''
                 recruit['state'] = ''
-                print(emoji.emojize(f':thumbsdown: Error parsing high school and hometown "{meta_span_text}" for {recruit["full_name"]}', use_aliases=True))
+                print(emoji.emojize(
+                    f':thumbsdown: Error parsing high school and hometown "{meta_span_text}" for {recruit["full_name"]}',
+                    use_aliases=True))
             ranking_div = list_item.find('div', class_='rankings-page__star-and-score')
             recruit['score'] = ranking_div.find('span', class_='score').text
             star_list = ranking_div.find_all('span', class_='icon-starsolid yellow')
@@ -70,7 +65,9 @@ def parse_page_of_recruits(url, recruit_list, year):
                 recruit['height_feet'] = 0.0
                 recruit['height_inches'] = 0.0
                 recruit['weight'] = 0.0
-                print(emoji.emojize(f':thumbsdown: Error parsing height, feet, and weight "{height_and_weight_text}" for {recruit["full_name"]}', use_aliases=True))
+                print(emoji.emojize(
+                    f':thumbsdown: Error parsing height, feet, and weight "{height_and_weight_text}" for {recruit["full_name"]}',
+                    use_aliases=True))
         recruit_list.append(recruit)
 
 
@@ -81,5 +78,7 @@ for year in year_range:
         url = f'https://247sports.com/Season/{year}-Football/CompositeRecruitRankings/?page={page_index}'
         print(emoji.emojize(f':rocket: Fetching: {url}'))
         parse_page_of_recruits(url, recruit_list, year)
-    with open(f'recruit-list-{year}.txt', 'w') as output_file:
+    file_name = f'{recruit_list_path}/recruit-list-{year}.txt'
+    with open(file_name, 'w') as output_file:
         json.dump(recruit_list, output_file)
+    print(emoji.emojize(f':file_folder: Wrote {year} recruits to {file_name}'))

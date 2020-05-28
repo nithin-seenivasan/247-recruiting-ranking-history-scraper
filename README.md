@@ -28,4 +28,4 @@ Before running the script, be sure to change the year range to fetch for:
 year_range = range(2010, 2021)
 ```
 
-All dependencies are located in `requirements.txt`. To run, simple execute the command `python scrape-recruit-list.py`. The script will generate a file for each year (i.e. `recruit-list-2020.txt`) in the root directory. These files are ignored by Git.
+All dependencies are located in `requirements.txt`. To run, simple execute the command `python scrape-recruit-list.py`. The script will generate a file for each year (i.e. `recruit-list-2020.txt`) in the `/recruit-lists` directory. These files are ignored by Git.

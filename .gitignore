@@ -132,4 +132,5 @@ dmypy.json
 .idea
 
 # Output
-recruit-list-*.txt
+recruit-lists/
+ranking-histories/
