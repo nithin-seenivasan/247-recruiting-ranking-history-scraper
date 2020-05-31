@@ -40,8 +40,6 @@ def get_event_items(url):
             }
             event_list.append(event)
 
-
-jsonfiles = []
 path = './recruit-lists/test-list.json'
 for file in glob.glob(path):
     with open(file,'r') as recruit_list:
@@ -54,7 +52,9 @@ for file in glob.glob(path):
                 url = f'{player_url}/TimelineEvents/?Page={pagen}'
                 get_event_items(url)   
             print(event_list)
-            file_name = f'./recruit-lists/recruit-lists-events.json'
+            file_name = f'./recruit-lists/recruit-lists-events.json1'
             with open(file_name, 'w') as output_file:
-                json.dump(event_list,output_file)
+                for line in event_list:
+                    json.dump(line,output_file)
+                    output_file.write('\n')
             print(f'Wrote {file} recruits to {file_name}')
