@@ -50,10 +50,10 @@ for file in glob.glob(path):
             event_list = []
             for pagen in range(1, recruit_pages + 1):
                 url = f'{player_url}/TimelineEvents/?Page={pagen}'
-                get_event_items(url)   
+                get_event_items(url)
             print(event_list)
             file_name = f'./recruit-lists/recruit-lists-events.json1'
-            with open(file_name, 'w') as output_file:
+            with open(file_name, 'a') as output_file:
                 for line in event_list:
                     json.dump(line,output_file)
                     output_file.write('\n')
