@@ -21,7 +21,7 @@ create_output_directory(f'{recruit_timeline_output_directory_base}/{year}')
 
 
 with open(recruit_list_file_path, 'r') as recruit_list_file:
-    for count, line in enumerate(recruit_list_file):
+    for index, line in enumerate(recruit_list_file):
         recruit = json.loads(line)
         ranking_history_url = get_ranking_history_url(recruit['247_url'], recruit['full_name'])
         if ranking_history_url is not None:
@@ -35,11 +35,10 @@ with open(recruit_list_file_path, 'r') as recruit_list_file:
             for event in ranking_history:
                 json.dump(event, ranking_history_file)
                 ranking_history_file.write('\n')
-        print(emoji.emojize(f':file_folder: Wrote {recruit_list_file_path} recruits to {ranking_history_file_name}', use_aliases=True))
+        print(emoji.emojize(f':file_folder: Wrote ranking history for index {index} to {ranking_history_file_name}', use_aliases=True))
         timeline_events_file_name = f'{recruit_timeline_output_directory_base}/{year}/{recruit["247_id"]}.json'
         with open(timeline_events_file_name, 'a') as timeline_events_file:
             for event in timeline_events:
                 json.dump(event, timeline_events_file)
                 timeline_events_file.write('\n')
-        print(emoji.emojize(f':file_folder: Wrote {recruit_list_file_path} recruits to {timeline_events_file_name}', use_aliases=True))
-
+        print(emoji.emojize(f':file_folder: Wrote timeline events for index {index} to {timeline_events_file_name}', use_aliases=True))
