@@ -21,7 +21,11 @@ def get_recruiting_ranking_history(player_id, recruiting_ranking_url, full_name)
     ranking_history_output = []
     for list_item in recruiting_ranking_lis:
         try:
-            rank_text = list_item.find('span', class_='rank').text
+            try:
+                rank_text = list_item.find('span', class_='rank').text
+                rank_value = float(rank_text) if rank_text != '-' else 0.0
+            except:
+                rank_value = -1.0
             rating_text = list_item.find('span', class_='rating').text
             rating_value = float(rating_text) if rating_text != '-' else 0.0
             delta_element = list_item.find('span', class_='last')
@@ -34,7 +38,7 @@ def get_recruiting_ranking_history(player_id, recruiting_ranking_url, full_name)
             ranking_history_output.append({
                 '247_id': player_id,
                 'rating': rating_value,
-                'rank': float(rank_text) if rank_text != '-' else 0.0,
+                'rank': rank_value,
                 'change_date': convert_to_year_month_day_from_number_month(
                     list_item.find('span', class_='change-date').text),
                 'delta': delta_value,
