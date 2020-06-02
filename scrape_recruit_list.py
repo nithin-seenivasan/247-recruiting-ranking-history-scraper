@@ -78,7 +78,7 @@ for year in year_range:
         url = f'https://247sports.com/Season/{year}-Football/CompositeRecruitRankings/?page={page_index}'
         print(emoji.emojize(f':rocket: Fetching: {url}'))
         parse_page_of_recruits(url, recruit_list, year)
-    file_name = f'{recruit_list_path}/recruit-list-{year}.txt'
+    file_name = f'{recruit_list_path}/recruit-list-{year}.json'
     with open(file_name, 'w') as output_file:
         json.dump(recruit_list, output_file)
     print(emoji.emojize(f':file_folder: Wrote {year} recruits to {file_name}'))

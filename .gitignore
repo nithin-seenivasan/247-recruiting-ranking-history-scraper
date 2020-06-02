@@ -133,4 +133,8 @@ dmypy.json
 
 # Output
 recruit-lists/
-ranking-histories/
+recruit-ranking-histories/
+recruit-timeline-histories/
+
+# Testing Files
+test-list.json
