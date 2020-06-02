@@ -13,30 +13,35 @@ def get_ranking_history_url(player_profile_url, full_name):
         print(emoji.emojize(f':thumbsdown: Error parsing recruiting ranking history page for {full_name}', use_aliases=True))
 
 
-def get_recruiting_ranking_history(player_id, recruiting_ranking_url):
+def get_recruiting_ranking_history(player_id, recruiting_ranking_url, full_name):
     recruiting_ranking_html = http_get(recruiting_ranking_url)
     base_page = BeautifulSoup(recruiting_ranking_html, 'html.parser')
     recruiting_ranking_ul = base_page.find('ul', class_='ranking-history-list')
     recruiting_ranking_lis = recruiting_ranking_ul.find_all('li', class_='')
     ranking_history_output = []
     for list_item in recruiting_ranking_lis:
-        rank_text = list_item.find('span', class_='rank').text
-        rating_text = list_item.find('span', class_='rating').text
-        rating_value = float(rating_text) if rating_text != '-' else 0.0
-        delta_element = list_item.find('span', class_='last')
-        delta_value = float(delta_element.text) if delta_element.text != '-' else 0.0
-        delta_value = delta_value * -1.0 if 'red' in delta_element['class'] else delta_value
-        delta_inception_element = list_item.find('span', class_='inception')
-        delta_inception_value = float(delta_inception_element.text) if delta_inception_element.text != '-' else 0.0
-        delta_inception_value = delta_inception_value * -1.0 if 'red' in delta_inception_element['class'] else delta_inception_value
-        ranking_history_output.append({
-            '247_id': player_id,
-            'rating': rating_value,
-            'rank': float(rank_text) if rank_text != '-' else 0.0,
-            'change_date': convert_to_year_month_day_from_number_month(list_item.find('span', class_='change-date').text),
-            'delta': delta_value,
-            'delta_inception_value': delta_inception_value
-        })
+        try:
+            rank_text = list_item.find('span', class_='rank').text
+            rating_text = list_item.find('span', class_='rating').text
+            rating_value = float(rating_text) if rating_text != '-' else 0.0
+            delta_element = list_item.find('span', class_='last')
+            delta_value = float(delta_element.text) if delta_element.text != '-' else 0.0
+            delta_value = delta_value * -1.0 if 'red' in delta_element['class'] else delta_value
+            delta_inception_element = list_item.find('span', class_='inception')
+            delta_inception_value = float(delta_inception_element.text) if delta_inception_element.text != '-' else 0.0
+            delta_inception_value = delta_inception_value * -1.0 if 'red' in delta_inception_element[
+                'class'] else delta_inception_value
+            ranking_history_output.append({
+                '247_id': player_id,
+                'rating': rating_value,
+                'rank': float(rank_text) if rank_text != '-' else 0.0,
+                'change_date': convert_to_year_month_day_from_number_month(
+                    list_item.find('span', class_='change-date').text),
+                'delta': delta_value,
+                'delta_inception_value': delta_inception_value
+            })
+        except:
+            print(emoji.emojize(f':thumbsdown: Error parsing ranking history for {full_name}', use_aliases=True))
     return ranking_history_output
 
 
