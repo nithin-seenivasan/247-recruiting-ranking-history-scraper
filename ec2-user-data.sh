@@ -10,4 +10,4 @@ aws s3 cp s3://247-recruit-rankings-2010-2020/recruit-list/ recruit-lists --recu
 python3 -m venv env
 source env/bin/activate
 sudo pip3 install -r requirements.txt
-python3 process_recruits.py ./recruit-lists/recruit-list-2020.json
+sudo python3 process_recruits.py 2020 ./recruit-lists/recruit-list-2020.json
