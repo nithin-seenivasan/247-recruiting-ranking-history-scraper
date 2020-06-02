@@ -47,7 +47,7 @@ def get_recruiting_timeline(player_id, player_profile_url, full_name):
     try:
         number_of_timeline_pages = int(base_page.find_all('a', class_='pagn_link')[-2].text)
     except:
-        print(emoji.emojize(f':thumbsdown: Error parsing recruiting ranking history page for {full_name}',
+        print(emoji.emojize(f':warning: Couldn\'t parse pagination for {full_name}',
                             use_aliases=True))
     event_output_list = []
     timeline_ul = base_page.find('ul', class_='timeline-event-index_lst')
