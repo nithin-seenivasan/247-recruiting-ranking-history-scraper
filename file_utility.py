@@ -12,5 +12,6 @@ def write_to_file_for_s3_athena(index, data_list, file_name):
             print(emoji.emojize(f':file_folder: Wrote recruit at index {index} to {file_name}', use_aliases=True))
         else:
             print(emoji.emojize(f':file_folder: Nothing to write for recruit at index {index} for {file_name}', use_aliases=True))
-    except:
+    except Exception as exception:
         print(emoji.emojize(f':thumbsdown: Failed to write recruit at index {index} to {file_name}', use_aliases=True))
+        print(emoji.emojize(f':x: {exception}', use_aliases=True))
