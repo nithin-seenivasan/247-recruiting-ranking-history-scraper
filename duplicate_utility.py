@@ -8,7 +8,9 @@ def remove_duplicates(list_file_path, identifying_attribute):
     duplicates = {}
     duplicates_handled = {}
     with open(list_file_path, 'r') as list_file:
-        for index, line in enumerate(list_file):
+        index = 0
+        lines = list_file.readlines()
+        for line in lines:
             data = json.loads(line)
             if exists.get(data[identifying_attribute]):
                 print(emoji.emojize(f':thumbsdown: Duplicate data found on line {index}: {data[identifying_attribute]}', use_aliases=True))
@@ -18,10 +20,9 @@ def remove_duplicates(list_file_path, identifying_attribute):
                     duplicates[data[identifying_attribute]] = [index]
             else:
                 exists[data[identifying_attribute]] = True
+            index += 1
     if len(duplicates) > 0:
         print(emoji.emojize(f':thumbsdown: {len(duplicates)} duplicates found', use_aliases=True))
-        with open(list_file_path, 'r') as list_file:
-            lines = list_file.readlines()
         with open(list_file_path, 'w') as list_file:
             for line in lines:
                 data = json.loads(line)
