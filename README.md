@@ -1,9 +1,3 @@
----
-title: "Creating College Football Recruiting Database on AWS Athena"
-date: "2020-06-09T22:12:03.284Z"
-description: "A set of tools to fetch and process publicly available data from 247 for non-commercial, personal data analysis use."
----
-
 ## About College Football Recruiting 
 Despite being played by amateur student-athletes, college football has become a multi-billion dollar industry. Most likely due to the emotional connection to an academic institution and the incredibly entertaining and volatile lack of parity and consistency amongst teams, college football fans tend to be even more diehard than their NFL counterparts, particularly in the South. Though college football is played by undergraduate and graduate students, players are scouted as recruits as early as middle school. These recruits are evaluated based on several factors that indicate their success at both the collegiate and professional levels of football. Whether physical attributes like height and weight or skill sets like blocking and catching, all of these attributes plus countless others are synthesized into a rating. Recruits are then offered by universities culminating in commitments and signings. A good recruiting class can be an indication of future success for a college football team provided that the coaching staff develops talents as expected.
 
@@ -75,7 +69,7 @@ Recruiting timeline events are stored in the following path: `/recruit-timeline-
 }
 ```
 
-Given the large amount of data to process during stage two, this repository also includes a bootstrapping script for EC2 instances to install the Python tooling, configure the virtual environment, and pull the data from stage one via S3:
+Given the large amount of data to process during stage two, this repository also includes a bootstrapping shell script for EC2 instances to install the Python tooling, configure the virtual environment, and pull the data from stage one via S3. Pass the following to the user data field when provisioning a new EC2 instance:
 ```shell
 #!/bin/bash
 sudo yum install git -y
