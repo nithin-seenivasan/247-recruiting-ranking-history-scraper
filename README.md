@@ -1,4 +1,7 @@
 # Creating a Queryable 247 Sports College Football Recruiting Database 
+Despite being played by amateur student-athletes, college football has become a multi-billion dollar industry. Most likely due to the emotional connection to an academic institution and the incredibly volatile lack of parity and consistency amongst teams, college football fans tend to be even more diehard than their NFL counterparts, particularly in the South. Though college football is played by undergraduate and graduate students, players are scouted as recruits as early as middle school. These recruits are evaluated based on several factors that indicate their success at both the collegiate and professional levels of football. Whether physical attributes like height and weight or skill sets like blocking and catching, all of these attributes plus countless others are synthesized into a rating. Recruits are then offered by universities culminating in commitments and signings. Having a good recruiting class can be an indication of future success for your team provided that the coaching staff develops talents as expected.
+
+## Source Code
 This project is a set of Python and shell scripts to fetch and process publicly available data from 247 for non-commercial, personal data analysis use to be done using AWS Athena. Please note that the code is intended to be relatively transient. If any of the HTML changes on the site, the scraper will need to be modified.
 
 ## Stage One: Fetching Recruit Lists by Year
@@ -74,7 +77,7 @@ sudo pip3 install -r requirements.txt
 
 Note that since S3 bucket names are globally unique, this will need to be changed for any other bucket.
 
-## Stage Three: Cleanup and Optimization
+## Stage Three: Cleanup, Normalization, and Optimization
 After the first two stages, there should be three directories of data:
 - `/recruit-lists` contains one file per year containing all recruits from that year
 - `/recruit-ranking-histories` contains subdirectories for each year storing an individual JSON file per recruit capturing ranking changes
@@ -85,4 +88,11 @@ Several scrips to format this raw data are maintained in this repository. The fi
 Numerous duplicate recruits exist after producing the recruit lists in stage one, so `duplicate_utility.py` can be run to clean a stage one file in place: `python duplicate_utility.py <PATH_TO_RECRUIT_LIST_FILE>`.
 
 ## Configuring AWS Athena
-WIP
+For this project, Athena is cheaper and simpler to stand up than using a proper relational database which would require additional ETL jobs to migrate from the JSON source files to the tables. Athena uses serverless compute to query these raw files directly from S3 with ANSI SQL. After Athena and the Glue Data Catalog have been configured, SQL queries can be run against the datasets in S3 buckets. For example, this query computes when commits from the 2020 class were extended offers by the University of Texas at Austin:
+```sql
+select recruit.full_name, timeline.event_type, timeline.event_date, timeline.event_description
+from timeline_events timeline
+join recruit_list recruit on  recruit."247_id" = timeline."247_id"
+where timeline.event_type = 'Offer' and timeline.event_description like '%Texas Longhorns%' and recruit.year = 2020
+order by event_date desc
+```
