@@ -1,3 +1,4 @@
+import sys
 import math
 import json
 import emoji
@@ -5,12 +6,8 @@ import re
 from http_utility import http_get
 from bs4 import BeautifulSoup
 
-recruits_per_page = 50
-year_range = range(2020, 2021)
-recruit_list_path = './recruit-lists'
 
-
-def get_number_of_pages_for_year(year):
+def get_number_of_pages_for_year(year, recruits_per_page):
     url = f'https://247sports.com/Season/{year}-Football/CompositeRecruitRankings/'
     html = http_get(url)
     base_page = BeautifulSoup(html, 'html.parser')
@@ -71,9 +68,12 @@ def parse_page_of_recruits(url, recruit_list, year):
         recruit_list.append(recruit)
 
 
+recruits_per_page = 50
+year_range = range(int(sys.argv[1]), int(sys.argv[2]))
+recruit_list_path = './recruit-lists'
 for year in year_range:
     recruit_list = []
-    number_of_pages_for_year = get_number_of_pages_for_year(year)
+    number_of_pages_for_year = get_number_of_pages_for_year(year, recruits_per_page)
     for page_index in range(1, number_of_pages_for_year + 1):
         url = f'https://247sports.com/Season/{year}-Football/CompositeRecruitRankings/?page={page_index}'
         print(emoji.emojize(f':rocket: Fetching: {url}'))

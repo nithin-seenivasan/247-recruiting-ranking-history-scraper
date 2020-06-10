@@ -1,8 +1,8 @@
-# Creating a Queryable 247 Sports College Football Recruiting Database 
+## About College Football Recruiting 
 Despite being played by amateur student-athletes, college football has become a multi-billion dollar industry. Most likely due to the emotional connection to an academic institution and the incredibly volatile lack of parity and consistency amongst teams, college football fans tend to be even more diehard than their NFL counterparts, particularly in the South. Though college football is played by undergraduate and graduate students, players are scouted as recruits as early as middle school. These recruits are evaluated based on several factors that indicate their success at both the collegiate and professional levels of football. Whether physical attributes like height and weight or skill sets like blocking and catching, all of these attributes plus countless others are synthesized into a rating. Recruits are then offered by universities culminating in commitments and signings. Having a good recruiting class can be an indication of future success for your team provided that the coaching staff develops talents as expected.
 
 ## Source Code
-This project is a set of Python and shell scripts to fetch and process publicly available data from 247 for non-commercial, personal data analysis use to be done using AWS Athena. Please note that the code is intended to be relatively transient. If any of the HTML changes on the site, the scraper will need to be modified.
+This [repository](https://github.com/scottenriquez/247-recruiting-ranking-history-scraper) is a set of Python and shell scripts to fetch and process publicly available data from 247 for non-commercial, personal data analysis use to be done using AWS Athena. It's co-authored by [Callen Trail](https://callen.xyz). Please note that the code is brittle. If any of the HTML changes on the site, the scripts will need to be modified.
 
 ## Stage One: Fetching Recruit Lists by Year
 Players are scraped from the recruiting index page in the following format:

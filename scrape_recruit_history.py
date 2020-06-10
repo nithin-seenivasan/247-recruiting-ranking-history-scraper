@@ -42,7 +42,7 @@ def get_recruiting_ranking_history(player_id, recruiting_ranking_url, full_name)
                 'change_date': convert_to_year_month_day_from_number_month(
                     list_item.find('span', class_='change-date').text),
                 'delta': delta_value,
-                'delta_inception_value': delta_inception_value
+                'delta_inception': delta_inception_value
             })
         except:
             print(emoji.emojize(f':thumbsdown: Error parsing ranking history for {full_name}', use_aliases=True))
