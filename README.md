@@ -100,6 +100,8 @@ There are also several utility scripts to apply additional transformations. The 
 
 Numerous duplicate recruits exist after producing the recruit lists in stage one, so `duplicate_utility.py` can be run to clean a stage one output file in place: `python duplicate_utility.py <PATH_TO_RECRUIT_LIST_FILE>`.
 
+Both the recruiting history and event timeline scraping produced numerous duplicates. These data structure don't have a unique identifier (i.e. `247_id`). `duplicate_composite_utility.py` creates a composite key by concatenating all fields together to detect duplicates and deletes accordingly. To run, use the command `python duplicate_composite_utility.py <PATH_TO_FILE_WITH_COMPOSITE_KEY>`.
+
 ## Configuring AWS Athena
 For this project, Athena is cheaper and simpler to stand up than a dedicated, relational database that would require additional ETL jobs or scripts to migrate from the JSON source files to tables. Athena uses serverless compute to query these raw files directly from S3 with ANSI SQL. After Athena and the Glue Data Catalog have been configured, SQL queries can be run against the datasets in-place. For example, this query computes when commits from the 2020 class were extended offers by the University of Texas at Austin:
 ```sql
