@@ -16,7 +16,7 @@ def remove_composite_duplicates(list_file_path):
             if exists.get(composite_key):
                 print(emoji.emojize(f':thumbsdown: Duplicate data found on line {index}: {composite_key}', use_aliases=True))
                 if composite_key in duplicates:
-                    duplicates[composite_key].push(index)
+                    duplicates[composite_key].append(index)
                 else:
                     duplicates[composite_key] = [index]
             else:
@@ -38,7 +38,7 @@ def remove_composite_duplicates(list_file_path):
 def build_composite_key(data):
     composite_key = ''
     for key in data.keys():
-        composite_key += data[key]
+        composite_key += str(data[key])
     return composite_key
 
 

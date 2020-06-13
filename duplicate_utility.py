@@ -15,7 +15,7 @@ def remove_duplicates(list_file_path, identifying_attribute):
             if exists.get(data[identifying_attribute]):
                 print(emoji.emojize(f':thumbsdown: Duplicate data found on line {index}: {data[identifying_attribute]}', use_aliases=True))
                 if data[identifying_attribute] in duplicates:
-                    duplicates[data[identifying_attribute]].push(index)
+                    duplicates[data[identifying_attribute]].append(index)
                 else:
                     duplicates[data[identifying_attribute]] = [index]
             else:
