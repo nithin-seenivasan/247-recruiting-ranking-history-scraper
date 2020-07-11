@@ -1,0 +1,261 @@
+Air Force	Falcons	Air Force
+Akron	Zips	Akron
+Alabama	Crimson Tide	Alabama
+Appalachian State	Mountaineers	Appalachian State
+Arizona	Wildcats	Arizona
+Arizona State	Sun Devils	Arizona State
+Arkansas	Razorbacks	Arkansas
+Arkansas State	Red Wolves	Arkansas State
+Army	Black Knights	Army
+Auburn	Tigers	Auburn
+Ball State	Cardinals	Ball State
+Baylor	Bears	Baylor
+Boise State	Broncos	Boise State
+Boston College	Eagles	Boston College
+Bowling Green	Falcons	Bowling Green
+Buffalo	Bulls	Buffalo
+Brigham Young	Cougars	Brigham Young
+California	Golden Bears	California
+Central Michigan	Chippewas	Central Michigan
+Charlotte	49ers	Charlotte
+Cincinnati	Bearcats	Cincinnati
+Clemson	Tigers	Clemson
+Coastal Carolina	Chanticleers	Coastal Carolina
+Colorado	Buffaloes	Colorado
+Colorado State	Rams	Colorado State
+Connecticut	Huskies	Connecticut
+Duke	Blue Devils	Duke
+East Carolina	Pirates	East Carolina
+Eastern Michigan	Eagles	Eastern Michigan
+FIU	Panthers	FIU
+Florida	Gators	Florida
+Florida Atlantic	Owls	Florida Atlantic
+Florida State	Seminoles	Florida State
+Fresno State	Bulldogs	Fresno State
+Georgia	Bulldogs	Georgia
+Georgia Southern	Eagles	Georgia Southern
+Georgia State	Panthers	Georgia State
+Georgia Tech	Yellow Jackets	Georgia Tech
+Hawaii	Rainbow Warriors	Hawaii
+Houston	Cougars	Houston
+Illinois	Fighting Illini	Illinois
+Indiana	Hoosiers	Indiana
+Iowa	Hawkeyes	Iowa
+Iowa State	Cyclones	Iowa State
+Kansas	Jayhawks	Kansas
+Kansas State	Wildcats	Kansas State
+Kent State	Golden Flashes	Kent State
+Kentucky	Wildcats	Kentucky
+Liberty	Flames	Liberty
+Louisiana	Ragin' Cajuns	Louisiana
+Louisiana–Monroe	Warhawks	Louisiana–Monroe
+Louisiana Tech	Bulldogs	Louisiana Tech
+Louisville	Cardinals	Louisville
+LSU	Tigers	LSU
+Marshall	Thundering Herd	Marshall
+Maryland	Terrapins	Maryland
+Memphis	Tigers	Memphis
+Miami	Hurricanes	Miami
+Miami (OH)	RedHawks	Miami (OH)
+Michigan	Wolverines	Michigan
+Michigan State	Spartans	Michigan State
+Middle Tennessee	Blue Raiders	Middle Tennessee
+Minnesota	Golden Gophers	Minnesota
+Mississippi State	Bulldogs	Mississippi State
+Missouri	Tigers	Missouri
+Navy	Midshipmen	Navy
+N.C. State	Wolfpack	N.C. State
+Nebraska	Cornhuskers	Nebraska
+Nevada	Wolf Pack	Nevada
+New Mexico	Lobos	New Mexico
+New Mexico State	Aggies	New Mexico State
+North Carolina	Tar Heels	North Carolina
+North Texas	Mean Green	North Texas
+Northern Illinois	Huskies	Northern Illinois
+Northwestern	Wildcats	Northwestern
+Notre Dame	Fighting Irish	Notre Dame
+Ohio	Bobcats	Ohio
+Ohio State	Buckeyes	Ohio State
+Oklahoma	Sooners	Oklahoma
+Oklahoma State	Cowboys	Oklahoma State
+Old Dominion	Monarchs	Old Dominion
+Mississippi	Rebels  Ole Miss Rebels	Mississippi
+Ole Miss	Rebels  Ole Miss Rebels	Ole Miss
+Oregon	Ducks	Oregon
+Oregon State	Beavers	Oregon State
+Penn State	Nittany Lions	Penn State
+Pittsburgh	Panthers	Pittsburgh
+Purdue	Boilermakers	Purdue
+Rice	Owls	Rice
+Rutgers	Scarlet Knights	Rutgers
+San Diego State	Aztecs	San Diego State
+San Jose State	Spartans	San Jose State
+SMU	Mustangs	SMU
+South Alabama	Jaguars	South Alabama
+South Carolina	Gamecocks	South Carolina
+USF Bulls	Bulls	USF Bulls
+South Florida	Bulls	USF Bulls
+Southern Miss	Golden Eagles	Southern Miss
+Stanford	Cardinal	Stanford
+Syracuse	Orange	Syracuse
+TCU	Horned Frogs	TCU
+Temple	Owls	Temple
+Tennessee	Volunteers	Tennessee
+Texas	Longhorns	Texas
+Texas A&M	Aggies	Texas A&M
+Texas State	Bobcats	Texas State
+Texas Tech	Red Raiders	Texas Tech
+Toledo	Rockets	Toledo
+Troy	Trojans	Troy
+Tulane	Green Wave	Tulane
+Tulsa	Golden Hurricane	Tulsa
+UAB	Blazers	UAB
+UCF	Knights	UCF
+UCLA	Bruins	UCLA
+UConn	Huskies	UConn
+UMass	Minutemen	UMass
+UNLV	Rebels	UNLV
+USC	Trojans	USC
+UTEP	Miners	UTEP
+UTSA	Roadrunners	UTSA
+Utah	Utes	Utah
+Utah State	Aggies	Utah State
+Vanderbilt	Commodores	Vanderbilt
+Virginia	Cavaliers	Virginia
+Virginia Tech	Hokies	Virginia Tech
+Wake Forest	Demon Deacons	Wake Forest
+Washington	Huskies	Washington
+Washington State	Cougars	Washington State
+West Virginia	Mountaineers	West Virginia
+Western Kentucky	Hilltoppers	Western Kentucky
+Western Michigan	Broncos	Western Michigan
+Wisconsin	Badgers	Wisconsin
+Wyoming	Cowboys	Wyoming
+Abilene Christian	Wildcats	Abilene Christian
+Alabama A&M	Bulldogs	Alabama A&M
+Alabama State	Hornets	Alabama State
+Albany	Great Danes	Albany
+Alcorn State	Braves	Alcorn State
+Arkansas-Pine Bluff	Golden Lions	Arkansas-Pine Bluff
+Austin Peay	Governors	Austin Peay
+Bethune-Cookman	Wildcats	Bethune-Cookman
+Brown	Bears	Brown
+Bryant	Bulldogs	Bryant
+Bucknell	Bison	Bucknell
+Butler	Bulldogs	Butler
+Cal Poly	Mustangs	Cal Poly
+Campbell	Fighting Camels	Campbell
+Central Arkansas	Bears	Central Arkansas
+Central Connecticut	Blue Devils	Central Connecticut
+Charleston Southern	Buccaneers	Charleston Southern
+Chattanooga	Mocs	Chattanooga
+The Citadel	Bulldogs	The Citadel
+Colgate	Raiders	Colgate
+Columbia	Lions	Columbia
+Cornell	Big Red	Cornell
+Dartmouth	Big Green	Dartmouth
+Davidson	Wildcats	Davidson
+Dayton	Flyers	Dayton
+Delaware	Fightin' Blue Hens	Delaware
+Delaware State	Hornets	Delaware State
+Dixie State	Trailblazers	Dixie State
+Drake	Bulldogs	Drake
+Duquesne	Dukes	Duquesne
+East Tennessee State	Buccaneers	East Tennessee State
+Eastern Illinois	Panthers	Eastern Illinois
+Eastern Kentucky	Colonels	Eastern Kentucky
+Eastern Washington	Eagles	Eastern Washington
+Elon	Phoenix	Elon
+Florida A&M	Rattlers	Florida A&M
+Fordham	Rams	Fordham
+Furman	Paladins	Furman
+Gardner-Webb	Runnin' Bulldogs	Gardner-Webb
+Georgetown	Hoyas	Georgetown
+Grambling State	Tigers	Grambling State
+Hampton	Pirates	Hampton
+Harvard	Crimson	Harvard
+Holy Cross	Crusaders	Holy Cross
+Houston Baptist	Huskies	Houston Baptist
+Howard	Bison	Howard
+Idaho	Vandals	Idaho
+Idaho State	Bengals	Idaho State
+Illinois State	Redbirds	Illinois State
+Incarnate Word	Cardinals	Incarnate Word
+Indiana State	Sycamores	Indiana State
+Jackson State	Tigers	Jackson State
+Jacksonville State	Gamecocks	Jacksonville State
+James Madison	Dukes	James Madison
+Kennesaw State	Owls	Kennesaw State
+Lafayette	Leopards	Lafayette
+Lamar	Cardinals	Lamar
+Lehigh	Mountain Hawks	Lehigh
+Long Island University	Sharks	Long Island University
+Maine	Black Bears	Maine
+Marist	Red Foxes	Marist
+McNeese State	Cowboys	McNeese State
+Mercer	Bears	Mercer
+Mississippi Valley State	Delta Devils	Mississippi Valley State
+Missouri State	Bears	Missouri State
+Monmouth	Hawks	Monmouth
+Montana	Grizzlies	Montana
+Montana State	Bobcats	Montana State
+Morehead State	Eagles	Morehead State
+Morgan State	Bears	Morgan State
+Murray State	Racers	Murray State
+New Hampshire	Wildcats	New Hampshire
+Nicholls	Colonels	Nicholls
+Norfolk State	Spartans	Norfolk State
+North Carolina A&T	Aggies	North Carolina A&T
+North Carolina Central	Eagles	North Carolina Central
+North Dakota	Fighting Hawks	North Dakota
+North Dakota State	Bison	North Dakota State
+Northern Arizona	Lumberjacks	Northern Arizona
+Northern Colorado	Bears	Northern Colorado
+Northern Iowa	Panthers	Northern Iowa
+Northwestern State	Demons	Northwestern State
+Penn	Quakers	Penn
+Portland State	Vikings	Portland State
+Prairie View A&M	Panthers	Prairie View A&M
+Presbyterian	Blue Hose	Presbyterian
+Princeton	Tigers	Princeton
+Rhode Island	Rams	Rhode Island
+Richmond	Spiders	Richmond
+Robert Morris	Colonials	Robert Morris
+Sacramento State	Hornets	Sacramento State
+Sacred Heart	Pioneers	Sacred Heart
+Saint Francis	Red Flash	Saint Francis
+Sam Houston State	Bearkats	Sam Houston State
+Samford	Bulldogs	Samford
+San Diego	Toreros	San Diego
+South Carolina State	Bulldogs	South Carolina State
+South Dakota	Coyotes	South Dakota
+South Dakota State	Jackrabbits	South Dakota State
+Southeast Missouri State	Redhawks	Southeast Missouri State
+Southeastern Louisiana	Lions	Southeastern Louisiana
+Southern	Jaguars	Southern
+Southern Illinois	Salukis	Southern Illinois
+Southern Utah	Thunderbirds	Southern Utah
+Stephen F. Austin	Lumberjacks	Stephen F. Austin
+Stetson	Hatters	Stetson
+Stony Brook	Seawolves	Stony Brook
+Tarleton State	Texans	Tarleton State
+Tennessee State	Tigers	Tennessee State
+Tennessee Tech	Golden Eagles	Tennessee Tech
+Texas Southern	Tigers	Texas Southern
+Towson	Tigers	Towson
+UC Davis	Aggies	UC Davis
+UT Martin	Skyhawks	UT Martin
+Valparaiso	Crusaders	Valparaiso
+Villanova	Wildcats	Villanova
+VMI	Keydets	VMI
+Wagner	Seahawks	Wagner
+Weber State	Wildcats	Weber State
+Western Carolina	Catamounts	Western Carolina
+Western Illinois	Leathernecks	Western Illinois
+William & Mary	Tribe	William & Mary
+Wofford	Terriers	Wofford
+Yale	Bulldogs	Yale
+Youngstown State	Penguins	Youngstown State
+Grand Rapids C.c.	Raiders	Grand Rapids C.c.
+Fork Union Military Academy	Blue Devils	Fork Union Military Academy
+Massachusetts	Minutemen	Massachusetts
