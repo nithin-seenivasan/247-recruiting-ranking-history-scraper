@@ -12,7 +12,13 @@ def get_number_of_pages_for_year(year, recruits_per_page):
     html = http_get(url)
     base_page = BeautifulSoup(html, 'html.parser')
     count_span = base_page.find('span', class_='count')
-    recruit_count = int(count_span.text.strip(' ()'))
+    #recruit_count = int(count_span.text.strip('()')) 
+    #It was reading weirdly from the website, so had to change to this (29.11.22)
+    s=count_span.text
+    x = s[s.find('(')+1:s.find(')')]
+    recruit_count=int(x)
+    return math.ceil(recruit_count / recruits_per_page)
+
     return math.ceil(recruit_count / recruits_per_page)
 
 
